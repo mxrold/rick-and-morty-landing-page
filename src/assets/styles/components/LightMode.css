@@ -1,0 +1,16 @@
+.LightMode {
+    background-color: var(--white);
+}
+
+.Header__title--LightMode {
+    color: var(--darkBlue);
+}
+
+.Characters__LightMode div {
+    background-color: var(--almostWhite);
+}
+
+.Characters__LightMode h2,
+.Characters__LightMode p {
+    color: var(--darkBlue);
+}

@@ -1,0 +1,28 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: max-content;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--lightGray);
+}
+
+.Header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.Header button {
+    width: max-content;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 3.5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

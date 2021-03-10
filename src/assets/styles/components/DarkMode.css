@@ -1,0 +1,17 @@
+.DarkMode {
+    background-color: var(--darkBlue);
+}
+
+.Header__title--DarkMode {
+    color: var(--almostWhite);
+}
+
+.Characters__DarkMode div {
+    background-color: var(--mediumBlue);
+}
+
+.Characters__DarkMode h2,
+.Characters__DarkMode p {
+    color: var(--almostWhite);
+}
+

@@ -1,28 +1,23 @@
 import { useState } from 'react';
 
+import ThemeContext from './context/ThemeContext';
+
 import Header from './components/Header';
 import Characters from './components/Characters';
 
 import './assets/styles/App.css';
-import './assets/styles/components/DarkMode.css';
-import './assets/styles/components/LightMode.css';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const handleClick = () => {
-    setDarkMode(!darkMode);
-  }
+  const [ darkMode, setDarkMode ] = useState(false);
 
   return (
-    <div className={darkMode ? 'App DarkMode' : 'App LightMode'}>
-      <Header 
-        onHandleClick={handleClick}
-        darkMode={darkMode}
-      />
-      <Characters darkMode={darkMode}/>
-    </div>
+    <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+      <div className={darkMode ? 'App DarkMode' : 'App LightMode'}>
+        <Header />
+        <Characters />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

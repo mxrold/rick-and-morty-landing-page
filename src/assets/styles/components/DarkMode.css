@@ -1,7 +1,3 @@
-.DarkMode {
-    background-color: var(--darkBlue);
-}
-
 .Header__title--DarkMode {
     color: var(--almostWhite);
 }

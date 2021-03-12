@@ -1,10 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+
+import ThemeContext from '../context/ThemeContext';
+
 
 import '../assets/styles/components/Characters.css';
+import '../assets/styles/components/DarkMode.css';
+import '../assets/styles/components/LightMode.css';
 
 
-const Characters = ( props ) => {
+const Characters = ( ) => {
   const [characters, setCharacters] = useState([]);
+  const { darkMode } = useContext(ThemeContext);
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')
@@ -13,7 +19,7 @@ const Characters = ( props ) => {
   }, []);
 
   return (
-    <div className={props.darkMode ? 'Characters Characters__DarkMode' : 'Characters Characters__LightMode'}>
+    <div className={darkMode ? 'Characters Characters__DarkMode' : 'Characters Characters__LightMode'}>
       {characters.map(character => (
         <div className="Characters__item" key={character.id}>
           <figure>

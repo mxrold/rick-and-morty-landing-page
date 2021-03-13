@@ -2,10 +2,12 @@
     color: var(--darkMode);
 }
 
+
 .Characters__LightMode div {
     background-color: var(--almostWhite);
 }
 
+.Title__list__lightmode,
 .Characters__LightMode h2,
 .Characters__LightMode p {
     color: var(--darkMode);

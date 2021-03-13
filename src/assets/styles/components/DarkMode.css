@@ -6,6 +6,7 @@
     background-color: var(--mediumBlue);
 }
 
+.Title__list__darkmode,
 .Characters__DarkMode h2,
 .Characters__DarkMode p {
     color: var(--almostWhite);

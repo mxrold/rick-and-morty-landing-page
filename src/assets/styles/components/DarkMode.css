@@ -1,14 +1,15 @@
-.Header__title--DarkMode {
+.DarkMode {
+    background-color: var(--darkBlue);
+}
+
+.Header__title--DarkMode,
+.CharactersItem__darkmode,
+.FavoritesItem__darkmode,
+.Characters__search--darkmode {
     color: var(--almostWhite);
 }
 
-.Characters__DarkMode div {
+.CharactersItem__darkmode div:last-child:not(.CharactersItem__title),
+.FavoritesItem__darkmode div:last-child:not(.FavoritesItem__title){
     background-color: var(--mediumBlue);
 }
-
-.Title__list__darkmode,
-.Characters__DarkMode h2,
-.Characters__DarkMode p {
-    color: var(--almostWhite);
-}
-

@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useReducer, useMemo, useRef } from 'react';
+import { useState, useEffect, useContext, useReducer, useMemo, useRef, useCallback } from 'react';
 
 import ThemeContext from '../context/ThemeContext';
 
@@ -6,6 +6,7 @@ import '../assets/styles/components/Characters.css';
 import '../assets/styles/components/DarkMode.css';
 import '../assets/styles/components/LightMode.css';
 
+import Search from './Search';
 import FavoritesItem from './FavoritesItem';
 import CharactersItem from './CharactersItem';
 
@@ -39,9 +40,13 @@ const Characters = ( ) => {
       .then(data => setCharacters(data.results));
   }, []);
   
-  const handleSearch = () => {
+  // const handleSearch = () => {
+  //   setSearch(searchInput.current.value);
+  // };
+
+  const handleSearch = useCallback(() => {
     setSearch(searchInput.current.value);
-  };
+  }, []);
 
   const handleClick = favorite => {
     dispath({ type: 'ADD_TO_FAVORITES', payload: favorite })
@@ -57,15 +62,12 @@ const Characters = ( ) => {
 
   return (
     <div className={darkMode ? 'Characters Characters__DarkMode' : 'Characters Characters__LightMode'}>
-      <div className="Characters__search">
-        <input 
-          className={darkMode ? "Characters__search--darkmode" : "Characters__search--lightmode"} 
-          type="text" value={search} 
-          onChange={handleSearch}
-          placeholder="Search characters"
-          ref={searchInput}
-        />
-      </div>
+     <Search
+      darkMode={darkMode}
+      search={search}
+      searchInput={searchInput}
+      handleSearch={handleSearch}
+     />
 
       {favorites.favorites.length > 0 && 
         <FavoritesItem 

@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useReducer, useMemo, useRef, useCallback } from 'react';
+import { useState, useContext, useReducer, useMemo, useRef, useCallback } from 'react';
 
 import ThemeContext from '../context/ThemeContext';
 
@@ -6,10 +6,14 @@ import '../assets/styles/components/Characters.css';
 import '../assets/styles/components/DarkMode.css';
 import '../assets/styles/components/LightMode.css';
 
+import useCharacters from '../hooks/useCharacter';
+
 import Search from './Search';
 import FavoritesItem from './FavoritesItem';
 import CharactersItem from './CharactersItem';
 
+
+const API = 'https://rickandmortyapi.com/api/character/';
 
 const initialState = {
   favorites: []
@@ -28,18 +32,13 @@ const favoriteReducer = (state, action) => {
 }
 
 const Characters = ( ) => {
-  const [characters, setCharacters] = useState([]);
   const { darkMode } = useContext(ThemeContext);
   const [ search, setSearch ] = useState('');
   const [ favorites, dispath ] = useReducer(favoriteReducer, initialState);
   const searchInput = useRef(null);
 
-  useEffect(() => {
-    fetch('https://rickandmortyapi.com/api/character/')
-      .then(response => response.json())
-      .then(data => setCharacters(data.results));
-  }, []);
-  
+  const characters = useCharacters(API);
+
   // const handleSearch = () => {
   //   setSearch(searchInput.current.value);
   // };

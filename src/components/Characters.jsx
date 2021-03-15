@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, useReducer, useMemo } from 'react';
+import { useState, useEffect, useContext, useReducer, useMemo, useRef } from 'react';
 
 import ThemeContext from '../context/ThemeContext';
 
@@ -31,6 +31,7 @@ const Characters = ( ) => {
   const { darkMode } = useContext(ThemeContext);
   const [ search, setSearch ] = useState('');
   const [ favorites, dispath ] = useReducer(favoriteReducer, initialState);
+  const searchInput = useRef(null);
 
   useEffect(() => {
     fetch('https://rickandmortyapi.com/api/character/')
@@ -38,8 +39,8 @@ const Characters = ( ) => {
       .then(data => setCharacters(data.results));
   }, []);
   
-  const handleSearch = event => {
-    setSearch(event.target.value);
+  const handleSearch = () => {
+    setSearch(searchInput.current.value);
   };
 
   const handleClick = favorite => {
@@ -62,6 +63,7 @@ const Characters = ( ) => {
           type="text" value={search} 
           onChange={handleSearch}
           placeholder="Search characters"
+          ref={searchInput}
         />
       </div>
 

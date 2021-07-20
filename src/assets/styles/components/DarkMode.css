@@ -9,7 +9,6 @@
     color: var(--almostWhite);
 }
 
-.CharactersItem__darkmode div:last-child:not(.CharactersItem__title),
-.FavoritesItem__darkmode div:last-child:not(.FavoritesItem__title){
+.CharactersItem__darkmode div:last-child:not(.CharactersItem__title) {
     background-color: var(--mediumBlue);
 }

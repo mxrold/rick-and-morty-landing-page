@@ -1,5 +1,4 @@
 import '../assets/styles/components/FavoritesItem.css';
-import logoAdd from '../assets/static/icon-add.svg';
 
 
 const FavoritesItem = (props) => {
@@ -14,10 +13,8 @@ const FavoritesItem = (props) => {
                <div className="FavoritesItem__item" key={favorite.id}>
                    <figure>
                         <img src={favorite.image} alt={favorite.name}/>
+                        <figcaption className="FavoritesItem__item--info">{favorite.name}</figcaption>
                     </figure>
-                    <div className="FavoritesItem__item--info">
-                        <h2>{favorite.name}</h2>
-                    </div>
                </div>
             ))}
         </div>

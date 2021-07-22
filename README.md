@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Rick and Morty landing page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project built with React that lists the most important characters in Rick and Morty TV show . Also, you can add to favorites each character and switch to light and dark mode. 
+This project is a React Hooks practice.
 
-## Available Scripts
+## Preview 🖼
 
-In the project directory, you can run:
+![Design preview](./src/assets/static/rick-and-morty-preview.png)
 
-### `npm start`
+## Demo 💻
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you want to see the demo, you can visit this link. **[Demo of the project](https://rick-and-morty-landing-p-e6fe4.web.app/)**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Pre requirements 📋
 
-### `npm test`
+To run this project or you want to modify something, you needed the next points
+- A browser.
+- A code editor as Visual Studio Code, Atom, Sublime Text, among others.
+- Have npm and Git installed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation - How to clone 🚀
 
-### `npm run build`
+To install and run this project you can to do with __git clone__
+- With HTTPS
+~~~
+https://github.com/mxrold/rick-and-morty-landing-page.git
+~~~
+- With SSH
+~~~
+git@github.com:mxrold/rick-and-morty-landing-page.git
+~~~
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Not sure how to clone a project? **[Check this](https://github.com/mxrold/how-to-clone-a-repository-in-github/blob/main/README.md)**_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Building with 🛠️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- HTML
+- CSS
+- React
+- API [The Rick and Morty API](https://rickandmortyapi.com/)
